@@ -40,7 +40,8 @@ class MyApp extends StatelessWidget {
         body: ListView.builder(
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text('테디피셜 제공'),
+              title: Text('테디피셜 제공 | 작성 : 이테디'),
+
             );
           },
           children: [
