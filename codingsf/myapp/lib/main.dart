@@ -1,51 +1,39 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/main1.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MyAppContainer());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyAppContainer extends StatelessWidget {
+  const MyAppContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Appbar',
       theme: ThemeData(primarySwatch: Colors.red),
-      home: MyPage(),
+      home: MyPageContainer(),
     );
   }
 }
 
-class MyPage extends StatelessWidget {
-  const MyPage({super.key});
+class MyPageContainer extends StatelessWidget {
+  const MyPageContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text('Luis App'),
-        elevation: 0.0,
-        leading: IconButton(
-          onPressed: () {
-            print('menu click');
-          },
-          icon: Icon(Icons.menu),
+      backgroundColor: Colors.blue,
+      body: SafeArea(
+        child: Container(
+          child: Text('Hello'),
+          width: 100,
+          height: 100,
+          color: Colors.red,
+          margin: EdgeInsets.symmetric(
+            vertical: 80,
+            horizontal: 20,
+          ),
+          padding: EdgeInsets.all(20),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {
-              print('shopping cart click');
-            },
-            icon: Icon(Icons.shopping_cart),
-          ),
-          IconButton(
-            onPressed: () {
-              print('search cart click');
-            },
-            icon: Icon(Icons.search),
-          ),
-        ],
       ),
     );
   }
