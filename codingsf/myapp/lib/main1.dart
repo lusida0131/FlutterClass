@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp()); // compiler에게 시작 함수 알려주기 위해
+//void main() => runApp(MyApp()); // compiler에게 시작 함수 알려주기 위해
 
 class MyApp extends StatelessWidget {
   // Myapp 커스텀 위젯 생성
