@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/data/questions.dart';
+import 'package:quiz/questions_summary.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key, required this.chosenAnswers});
@@ -14,6 +15,7 @@ class ResultScreen extends StatelessWidget {
           'question_index': i,
           'question': questions[i].text,
           'correct_answer': questions[i].answers[0],
+          'user_answer': chosenAnswers[i]
         },
       );
     }
