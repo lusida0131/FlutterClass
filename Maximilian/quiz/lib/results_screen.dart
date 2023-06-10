@@ -35,7 +35,7 @@ class ResultScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const Text('List of answers and question ...'),
+            QuestionsSummary(getSummaryData()),
             const SizedBox(
               height: 30,
             ),
